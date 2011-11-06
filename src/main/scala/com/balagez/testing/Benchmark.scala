@@ -75,7 +75,7 @@ import com.sun.management.ThreadMXBean
  * @author Zoltán Balázs
  * @version 0.1
  */
-class Benchmark(labelWidth: Int = 0) {
+class Benchmark(val labelWidth: Int = 0) {
 	
 	/**
 	 * Stores timestamps which describe a state of the current thread.
@@ -160,7 +160,10 @@ class Benchmark(labelWidth: Int = 0) {
 	/**
 	 * Format string for report labels.
 	 */
-	private lazy val labelFormatter = "%1$-" + labelWidth + "s"
+	private lazy val labelFormatter = labelWidth match {
+		case 0 => ""
+		case _ => "%1$-" + labelWidth + "s"
+	}
 	
 	/**
 	 * Collects measurements for totals.
@@ -188,11 +191,7 @@ class Benchmark(labelWidth: Int = 0) {
 	 * Measures execution time of a code block and prints formatted results.
 	 * @param code Code block to be benchmarked.
 	 */
-	def report(code: => Unit) = {
-		reports += measure(code)
-		header
-		println(reports.last)
-	}
+	def report(code: => Unit): Unit = report("", code)
 	
 	/**
 	 * Measures execution time of a code block and prints formatted results with prepended label.
