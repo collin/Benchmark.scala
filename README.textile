@@ -5,16 +5,17 @@ Inspired by the "Ruby Benchmark library":http://www.ruby-doc.org/stdlib-1.9.2/li
 
 h2. Example - Measurements
 
-Measuring execution time to construct a 10M long string of letter "a". Note that parenthesis can be omitted which helps readability. This outputs the measurement below (run on a Core i7 Macbook Pro).
+Measuring execution time to construct a 10M long string of letter "a". Note that parenthesis can be omitted which helps readability.
 
 <pre>
 println(Benchmark.measure { "a" * 10485760 })
 </pre>
+
+This outputs the measurement below (run on a Core i7 Macbook Pro). This report shows, from left to right, the CPU time spent in user mode, the CPU time spent in system mode, the total CPU time (user mode or system mode) and real time in seconds.
+
 <pre>
     0.175734    0.000568    0.176302    0.215648
 </pre>
-
-This report shows, from left to right, the CPU time spent in user mode, the CPU time spent in system mode, the total CPU time (user mode or system mode) and real time in seconds.
 
 h2. Example - Reports
 
@@ -26,6 +27,9 @@ Benchmark.bm { x =>
   x.report { "a" * 10485760 }
 }
 </pre>
+
+This outputs the following report. Column labels are automatically added.
+
 <pre>
 Benchmarking the speed of creating a 10M long string of "a"
         user      system       total        real
@@ -34,7 +38,7 @@ Benchmarking the speed of creating a 10M long string of "a"
 
 h2. Example - Advanced reports
 
-This example is taken form `BenchmarkExample` which calculated the 30th Fibonacci number using various algorithms.
+This example is taken form @BenchmarkExample@ which calculated the 30th Fibonacci number using various algorithms.
 
 <pre>
 val n = 30
@@ -49,6 +53,9 @@ Benchmark.bm(20, { x =>
   x.total()
   x.avg()
 </pre>
+
+This outputs the following report.
+
 <pre>
 Calculating Fibonacci(30) using different algorithms:
                             user      system       total        real
