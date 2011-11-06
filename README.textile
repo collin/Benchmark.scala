@@ -38,7 +38,7 @@ Benchmarking the speed of creating a 10M long string of "a"
 
 h2. Example - Advanced reports
 
-This example is taken form @BenchmarkExample@ which calculated the 30th Fibonacci number using various algorithms.
+This example is taken form @BenchmarkExample@ which calculates the 30th Fibonacci number using various algorithms.
 
 <pre>
 val n = 30
