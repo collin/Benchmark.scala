@@ -1,0 +1,17 @@
+.DS_Store
+.classpath
+.history
+.project
+.scala_dependencies
+.settings
+.target
+bin/*
+*.class
+target/
+project/plugins/project/target/
+project/plugins/target/
+project/target/
+project/boot/
+*.log
+*.log.*
+.cache
