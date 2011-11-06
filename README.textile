@@ -52,6 +52,7 @@ Benchmark.bm(20, { x =>
   x.separator
   x.total()
   x.avg()
+}
 </pre>
 
 This outputs the following report.
