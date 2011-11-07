@@ -3,6 +3,12 @@ h1. Benchmark.scala
 Provides methods to measure and report the time used to execute Scala code.
 Inspired by the "Ruby Benchmark library":http://www.ruby-doc.org/stdlib-1.9.2/libdoc/benchmark/rdoc/Benchmark.html.
 
+h2. Requirements
+
+* Scala 2.9.1
+* sbt 0.11.0
+* Java SE JRE >6u25
+
 h2. Example - Measurements
 
 Measuring execution time to construct a 10M long string of letter "a". Note that parenthesis can be omitted which helps readability.
