@@ -9,6 +9,15 @@ h2. Requirements
 * sbt 0.11.0
 * Java SE JRE >6u25
 
+h2. Installation
+
+<pre>
+git clone git://github.com/balagez/Benchmark.scala.git
+cd Benchmark.scala
+sbt package
+cp target/scala-2.9.1/benchmark.scala_2.9.1-0.1.jar /path/to/project/lib
+</pre>
+
 h2. Example - Measurements
 
 Measuring execution time to construct a 10M long string of letter "a". Note that parenthesis can be omitted which helps readability.
