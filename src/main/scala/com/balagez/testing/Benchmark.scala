@@ -1,7 +1,7 @@
 package com.balagez.testing
 
-import sun.management.ManagementFactory
-import com.sun.management.ThreadMXBean
+import java.lang.management.ManagementFactory
+import java.lang.management.ThreadMXBean
 
 /**
  * Provides methods to measure and report the time used to execute Scala code.
